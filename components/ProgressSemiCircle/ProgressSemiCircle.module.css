@@ -1,0 +1,109 @@
+.container {
+  position: relative;
+  margin: 0.4rem;
+  float: left;
+  text-align: center;
+}
+
+.barOverflow {
+  /* Wraps the rotating .bar */
+  position: relative;
+  overflow: hidden;
+  /* Comment this line to understand the trick */
+  width: 8rem;
+  height: 6.7rem;
+  /* Half circle (overflow) */
+  margin-bottom: -4.2rem;
+  /* bring the numbers up */
+}
+
+.clock {
+  position: absolute;
+  top: 1.7rem;
+  left: 2.4rem;
+  width: 4.4rem;
+  height: 4.4rem;
+  z-index: 0;
+}
+
+.bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8rem;
+  height: 8rem;
+  /* full circle! */
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 0.4rem solid var(--light-gray);
+  /* half gray, */
+  border-top-color: var(--light-gray);
+  /* half azure */
+  animation: showBorder 1s linear forwards;
+  animation-delay: 1s;
+}
+
+@keyframes showBorder {
+  from {
+    border-top-color: var(--light-gray);
+  }
+
+  to {
+    border-top-color: var(--main-color);
+  }
+}
+
+.barLeftBorder {
+  border-left-color: var(--light-gray);
+  animation: showLeftBorder 1s linear forwards;
+  animation-delay: 1s;
+}
+
+@keyframes showLeftBorder {
+  from {
+    border-top-color: var(--light-gray);
+    border-left-color: var(--light-gray);
+  }
+
+  to {
+    border-left-color: var(--main-color);
+    border-top-color: var(--main-color);
+  }
+}
+
+.barRightBorder {
+  border-right-color: var(--light-gray);
+  animation: showRightBorder 1s linear forwards;
+  animation-delay: 1s;
+}
+
+@keyframes showRightBorder {
+  from {
+    border-right-color: var(--light-gray);
+    border-top-color: var(--light-gray);
+    border-left-color: var(--light-gray);
+  }
+
+  to {
+    border-right-color: var(--main-color);
+    border-left-color: var(--main-color);
+    border-top-color: var(--main-color);
+  }
+}
+
+.values {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  z-index: 1;
+  position: relative;
+}
+
+.percentage {
+  font-size: 1.5rem;
+  font-weight: var(--bold);
+}
+
+.text {
+  font-size: 1rem;
+}

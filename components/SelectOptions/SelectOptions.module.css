@@ -1,0 +1,174 @@
+.container {
+  display: flex;
+  align-items: flex-end;
+  background-color: var(--grey);
+  height: 2rem;
+  width: 100%;
+  border: 0.5px solid var(--gray);
+  border-radius: 0.75rem;
+}
+
+.containerOnly {
+  border: none;
+  width: max-content;
+}
+
+.containerWithoutLabel {
+  width: 100%;
+  height: 3rem;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.optionSelected {
+  width: 100%;
+  min-height: 3rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  flex-flow: row nowrap;
+  padding: 0 0.3rem;
+  border-right: 0.5px solid var(--gray);
+  overflow-x: auto;
+}
+
+.option {
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  border-radius: 1.2rem;
+  border: 0.5px solid var(--gray);
+  padding: 0.5rem;
+}
+
+.button {
+  padding: 0;
+  height: 100%;
+  margin-left: 0.3rem;
+  font-size: 0.7rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.selectContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  width: 12rem;
+  position: relative;
+  flex-shrink: 0;
+  padding: 1rem;
+}
+
+.selectContainerOnly {
+  height: 2rem;
+  width: 12rem;
+  border: 0.5px solid var(--gray);
+  border-radius: 0.75rem;
+}
+
+.label {
+  font: var(--text-font);
+  font-size: .8rem;
+  margin-bottom: 0.5rem;
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.4rem;
+  width: 100%;
+  border-radius: 0.75rem;
+  background-color: var(--grey);
+  height: 100%;
+  border: 1px solid var(--grey);
+  z-index: 12;
+}
+
+.title {
+  font: var(--text-font);
+  font-size: 0.9rem;
+}
+
+.childrenClose {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease;
+  z-index: 2;
+}
+
+.childrenOpen {
+  transform: translateY(-0.4rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  transition: height 0.5s ease;
+  width: 100%;
+  max-height: 6rem;
+  overflow: hidden auto;
+  background: var(--background-color);
+  border-radius: 0.6rem;
+  position: absolute;
+  z-index: 20;
+}
+
+.top {
+  bottom: 2.3rem;
+}
+
+.bottom {
+  top: 3.7rem;
+}
+
+.item {
+  font: var(--text-font);
+  height: max-content;
+  padding: 0.7rem;
+  width: 100%;
+  opacity: 0.7;
+  font-weight: var(--medium);
+  z-index: 0;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.checkContainer {
+  border-radius: 0.4rem;
+  border: 1px solid var(--input-border);
+  background-color: var(--secondary-background-color);
+  min-width: 1.2rem;
+  min-height: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkContainer img {
+  width: 90%;
+  height: 90%;
+  display: none;
+}
+
+.checkContainer.checked {
+  background-color: var(--main-color);
+  border: none;
+}
+
+.checkContainer.checked img {
+  display: block;
+}

@@ -1,0 +1,61 @@
+.container {
+  position: relative;
+}
+
+.inputContainer {
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: 100%;
+  border: 1px solid var(--input-border-color);
+  background-color: var(--input-background-color);
+  border-radius: 0.625rem;
+  height: 3.375rem;
+  max-width: 600px;
+}
+
+.input {
+  width: 100%;
+  height: 100%;
+  padding: 0.7rem;
+  border-radius: 0.625rem;
+  background-color: transparent;
+  color: var(--font-color);
+  border: none;
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  font-family: var(--font-family);
+}
+
+.input:focus {
+  outline: 1px solid var(--main-color);
+}
+
+.calendarImage {
+  position: absolute;
+  right: 2%;
+  cursor: pointer;
+}
+
+.input[type='date']::-webkit-inner-spin-button,
+.input[type='date']::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.error {
+  display: block;
+  color: var(--red);
+  font-size: 0.9rem;
+  line-height: 1rem;
+  margin: 0.3rem;
+}
+
+.label {
+  font: var(--text-font);
+  margin-bottom: 0.3rem;
+}
+
+.span {
+  color: var(--required);
+}

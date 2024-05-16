@@ -1,0 +1,148 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 2.6rem;
+}
+
+.wrapperWithLabel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 2.4rem calc(1rem / 2);
+  height: 2.6rem;
+}
+
+.inputWrapper {
+  width: calc(100% + 1rem);
+  margin: 0 calc(1rem / -2);
+  position: absolute;
+  height: 1rem;
+}
+
+.controlWrapper {
+  width: 100%;
+  position: absolute;
+  height: 1rem;
+}
+
+.input {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  appearance: none;
+  height: 100%;
+  opacity: 0;
+  z-index: 3;
+  padding: 0;
+}
+
+.input::-ms-track {
+  appearance: none;
+  background: transparent;
+  border: transparent;
+}
+
+.input::-moz-range-track {
+  appearance: none;
+  background: transparent;
+  border: transparent;
+}
+
+.input:focus::-webkit-slider-runnable-track {
+  appearance: none;
+  background: transparent;
+  border: transparent;
+}
+
+.input::-ms-thumb {
+  appearance: none;
+  pointer-events: all;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0;
+  border: 0 none;
+  cursor: grab;
+}
+
+.input::-ms-thumb:active {
+  cursor: grabbing;
+}
+
+.input::-moz-range-thumb {
+  appearance: none;
+  pointer-events: all;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0;
+  border: 0 none;
+  cursor: grab;
+}
+
+.input::-moz-range-thumb:active {
+  cursor: grabbing;
+}
+
+.input::-webkit-slider-thumb {
+  appearance: none;
+  pointer-events: all;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0;
+  border: 0 none;
+  cursor: grab;
+}
+
+.input::-webkit-slider-thumb:active {
+  cursor: grabbing;
+}
+
+.rail {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 0.4rem;
+  border-radius: 0.6rem;
+  background: var(--light-gray);
+}
+
+.innerRail {
+  position: absolute;
+  height: 100%;
+  background: var(--main-color);
+}
+
+.control {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  position: absolute;
+  background: var(--main-color);
+  top: 50%;
+  margin-left: calc(1rem / -2);
+  transform: translate3d(0, -50%, 0);
+  z-index: 2;
+}
+
+.label {
+  position: absolute;
+  top: -2.2rem;
+  background-color: var(--white);
+  color: var(--black);
+  font-family: var(--font-family);
+  font-weight: var(--bold);
+  padding: 0.3rem;
+  width: max-content;
+  font-size: 1.1rem;
+  border-radius: 0.6rem;
+}
+
+.placeholder {
+  margin-top: 3rem;
+  width: 100%;
+  text-align: center;
+  font-family: var(--font-family);
+  font-weight: var(--semibold);
+  font-size: 1.1rem;
+}

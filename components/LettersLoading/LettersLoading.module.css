@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  gap: .7rem;
+  overflow: hidden;
+  width: max-content;
+  height: max-content;
+}
+
+.letter {
+  display: inline-block;
+  transform-origin: 50% 50% -25px;
+  transform-style: preserve-3d;
+  animation: turnLetter 2s infinite;
+  text-transform: uppercase;
+  font: var(--title-font);
+  font-weight: var(--regular);
+  font-size: .7rem;
+  color: linear-gradient(45deg, var(--main-color), var(--secondary-color), var(--white));
+}
+
+@keyframes turnLetter {
+  0% {
+    transform: rotateX(-360deg);
+    color: var(--main-color);
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  45% {
+    color: var(--secondary-color);
+  }
+
+  70% {
+    transform: rotateX(0);
+    color: var(--white);
+  }
+
+  80% {
+    opacity: 1;
+  }
+}

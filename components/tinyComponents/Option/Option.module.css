@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  align-items: center;
+  border-radius: 1.2rem;
+  border: 0.5px solid var(--gray);
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+}
+
+.medium {
+  height: 2.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.small {
+  height: 1.7rem;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.9rem;
+  color: var(--gray-opacity);
+}
+
+.button {
+  padding: 0;
+  height: 100%;
+  margin-left: 0.3rem;
+  font-size: 0.7rem;
+  align-items: center;
+  justify-content: flex-start;
+}
